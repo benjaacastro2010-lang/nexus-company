@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo — Constructora · NEXUS COMPANY</title>
+  <meta name="description" content="Ejemplo de diseño web para una constructora, creado por NEXUS COMPANY. Página demostrativa, no pertenece a una empresa real." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="../styles.css?v=20260926" />
+  <link rel="stylesheet" href="demo.css?v=20260926" />
+  <style>
+    /* ---- Paleta y tipografía propias de esta demo (constructora) ---- */
+    :root {
+      --bg: #100d0a;
+      --bg-2: #17130f;
+      --accent: #e08a3e;
+      --accent-2: #c9a15b;
+    }
+    body { background: var(--bg); }
+
+    .cst-hero { padding: 4.5rem 1.25rem 4rem; text-align: center; border-bottom: 1px solid rgba(247,247,250,.08); }
+    .cst-kicker { font-family: var(--font-mono); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-2); margin-bottom: 1.2rem; }
+    .cst-title { font-size: clamp(2rem, 5.5vw, 3.4rem); max-width: 18ch; margin: 0 auto 1.1rem; }
+    .cst-title span { color: var(--accent); }
+    .cst-sub { color: var(--ink-soft); max-width: 46ch; margin: 0 auto 2rem; font-size: 1.05rem; }
+    .cst-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    .cst-section { padding: 4rem 1.25rem; max-width: 1080px; margin-inline: auto; }
+    .cst-section-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2.4rem; border-bottom: 1px solid rgba(247,247,250,.1); padding-bottom: 1.2rem; }
+    .cst-section-num { font-family: var(--font-mono); color: var(--accent); font-size: 1rem; }
+    .cst-section-head h2 { font-size: 1.7rem; }
+
+    .cst-services { display: grid; gap: 1px; background: rgba(247,247,250,.1); border: 1px solid rgba(247,247,250,.1); grid-template-columns: 1fr; }
+    .cst-service { background: var(--bg); padding: 1.8rem; }
+    .cst-service svg { width: 30px; height: 30px; color: var(--accent); margin-bottom: 1rem; }
+    .cst-service h3 { font-size: 1.05rem; margin-bottom: .5rem; }
+    .cst-service p { color: var(--ink-soft); font-size: .92rem; }
+
+    .cst-projects { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+    .cst-project { border: 1px solid rgba(247,247,250,.1); border-radius: 14px; padding: 1.6rem; background: var(--bg-2); }
+    .cst-project svg { width: 100%; height: 110px; color: var(--accent-2); opacity: .9; margin-bottom: 1rem; }
+    .cst-project h3 { font-size: 1rem; margin-bottom: .3rem; }
+    .cst-project p { font-size: .85rem; color: var(--ink-mute); }
+
+    .cst-cta { text-align: center; padding: 4.5rem 1.25rem; background: var(--bg-2); border-top: 1px solid rgba(247,247,250,.08); }
+    .cst-cta h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); max-width: 20ch; margin: 0 auto 1rem; }
+    .cst-cta p { color: var(--ink-soft); max-width: 40ch; margin: 0 auto 2rem; }
+
+    @media (min-width: 720px) {
+      .cst-services { grid-template-columns: repeat(3, 1fr); }
+      .cst-projects { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="demo-topbar">
+    <a class="demo-back" href="../index.html#proyectos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a NEXUS COMPANY
+    </a>
+    <span class="demo-topbar-badge">Demo de diseño</span>
+  </header>
+
+  <p class="demo-disclaimer">
+    <strong>Ejemplo ilustrativo</strong> creado por NEXUS COMPANY — no pertenece a ninguna empresa real.
+  </p>
+
+  <main>
+    <section class="cst-hero">
+      <p class="cst-kicker">Constructora &amp; desarrollos</p>
+      <h1 class="cst-title">Construimos <span>con solidez</span>, de los cimientos a la entrega.</h1>
+      <p class="cst-sub">Más de una década levantando obras en la región, con dirección técnica propia y plazos que se cumplen.</p>
+      <div class="cst-actions">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/5492617467701?text=Hola%2C%20necesito%20una%20p%C3%A1gina%20web%20para%20mi%20constructora" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <a class="btn btn-ghost btn-lg" href="#cst-servicios">Ver servicios</a>
+      </div>
+    </section>
+
+    <section class="cst-section" id="cst-servicios">
+      <div class="cst-section-head"><span class="cst-section-num">01</span><h2>Servicios</h2></div>
+      <div class="cst-services">
+        <article class="cst-service">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 21V9l4-2v14M8 21V5l5-3v19M13 21V9l4 2v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Obra nueva</h3>
+          <p>Viviendas y locales de principio a fin, con proyecto ejecutivo propio.</p>
+        </article>
+        <article class="cst-service">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Remodelación y ampliación</h3>
+          <p>Sumamos metros y renovamos espacios sin frenar el uso diario del inmueble.</p>
+        </article>
+        <article class="cst-service">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <h3>Dirección de obra</h3>
+          <p>Supervisión técnica y de calidad para proyectos de terceros.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cst-section">
+      <div class="cst-section-head"><span class="cst-section-num">02</span><h2>Proyectos</h2></div>
+      <div class="cst-projects">
+        <article class="cst-project">
+          <svg viewBox="0 0 200 100" fill="none" preserveAspectRatio="xMidYMid meet"><rect x="20" y="40" width="60" height="50" stroke="currentColor" stroke-width="2"/><rect x="90" y="20" width="45" height="70" stroke="currentColor" stroke-width="2"/><rect x="145" y="55" width="35" height="35" stroke="currentColor" stroke-width="2"/><path d="M10 90h190" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Vivienda unifamiliar</h3>
+          <p>Proyecto de ejemplo — obra nueva, 180 m².</p>
+        </article>
+        <article class="cst-project">
+          <svg viewBox="0 0 200 100" fill="none" preserveAspectRatio="xMidYMid meet"><rect x="30" y="30" width="140" height="60" stroke="currentColor" stroke-width="2"/><path d="M30 55h140M70 30v60M110 30v60" stroke="currentColor" stroke-width="1.4"/><path d="M10 90h180" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Local comercial</h3>
+          <p>Proyecto de ejemplo — obra a nuevo, planta libre.</p>
+        </article>
+        <article class="cst-project">
+          <svg viewBox="0 0 200 100" fill="none" preserveAspectRatio="xMidYMid meet"><rect x="25" y="20" width="70" height="70" stroke="currentColor" stroke-width="2"/><rect x="105" y="45" width="70" height="45" stroke="currentColor" stroke-width="2"/><path d="M10 90h180" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Ampliación</h3>
+          <p>Proyecto de ejemplo — segundo piso sobre construcción existente.</p>
+        </article>
+        <article class="cst-project">
+          <svg viewBox="0 0 200 100" fill="none" preserveAspectRatio="xMidYMid meet"><path d="M30 90V50l40-25 40 25v40" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M110 90V60l35-20 35 20v30" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 90h180" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Conjunto de viviendas</h3>
+          <p>Proyecto de ejemplo — desarrollo de 4 unidades.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cst-cta">
+      <h2>¿Tenés un terreno o un proyecto en mente?</h2>
+      <p>Contanos qué necesitás construir y te decimos cómo empezamos.</p>
+      <a class="btn btn-primary btn-lg" href="https://wa.me/5492617467701?text=Hola%2C%20necesito%20una%20p%C3%A1gina%20web%20para%20mi%20constructora" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="demo-footer">
+    <p>Esta es una demo de diseño de NEXUS COMPANY — Diseño web para negocios.</p>
+    <a class="demo-back" href="../index.html#proyectos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a NEXUS COMPANY
+    </a>
+  </footer>
+</body>
+</html>

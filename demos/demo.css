@@ -1,0 +1,65 @@
+/* =============================================================
+   NEXUS COMPANY — estilos compartidos por las mini webs demo
+   (constructora.html / concesionaria.html / barberia.html)
+   Reutiliza los tokens, fuentes y el reset de ../styles.css —
+   este archivo solo agrega el "chrome" común a las 3 páginas.
+   ============================================================= */
+
+.demo-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .9rem 1.25rem;
+  background: rgba(10, 10, 15, 0.86);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(247, 247, 250, 0.1);
+  font-size: .88rem;
+}
+.demo-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--ink-soft, #ccc);
+  font-weight: 600;
+  transition: color .25s ease;
+}
+.demo-back:hover { color: var(--ink, #fff); }
+.demo-back svg { width: 16px; height: 16px; }
+.demo-topbar-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: .72rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #b6acff;
+  background: rgba(109, 91, 255, 0.14);
+  border: 1px solid rgba(109, 91, 255, 0.3);
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.demo-disclaimer {
+  text-align: center;
+  font-size: .82rem;
+  color: var(--ink-mute, #888);
+  padding: .8rem 1.25rem;
+  border-bottom: 1px solid rgba(247, 247, 250, 0.08);
+}
+.demo-disclaimer strong { color: var(--ink-soft, #ccc); }
+
+.demo-footer {
+  padding: 2.4rem 1.25rem 2.8rem;
+  text-align: center;
+  border-top: 1px solid rgba(247, 247, 250, 0.08);
+}
+.demo-footer p { font-size: .85rem; color: var(--ink-mute, #888); margin-bottom: 1rem; }
+.demo-footer .demo-back { justify-content: center; }
+
+@media (max-width: 539px) {
+  .demo-topbar { flex-wrap: wrap; }
+}

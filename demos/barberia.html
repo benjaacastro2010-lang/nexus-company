@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo — Barbería · NEXUS COMPANY</title>
+  <meta name="description" content="Ejemplo de diseño web para una barbería, creado por NEXUS COMPANY. Página demostrativa, no pertenece a una empresa real." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="../styles.css?v=20260926" />
+  <link rel="stylesheet" href="demo.css?v=20260926" />
+  <style>
+    :root {
+      --bg: #1a1113;
+      --bg-2: #221619;
+      --accent: #d43f4f;
+      --accent-2: #e0b15b;
+      --font-display: "Oswald", "Segoe UI", sans-serif;
+    }
+    body { background: var(--bg); }
+    h1, h2, h3 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .02em; }
+
+    .brb-pole {
+      height: 6px;
+      background: repeating-linear-gradient(45deg, var(--accent) 0 18px, var(--accent-2) 18px 36px, #f5f5f7 36px 54px);
+    }
+    .brb-hero { text-align: center; padding: 4.5rem 1.25rem 4rem; }
+    .brb-kicker { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-2); margin-bottom: 1.3rem; }
+    .brb-title { font-size: clamp(2.4rem, 7vw, 4.2rem); line-height: .98; max-width: 16ch; margin: 0 auto 1.2rem; }
+    .brb-title em { font-style: normal; color: var(--accent); }
+    .brb-sub { color: var(--ink-soft); max-width: 42ch; margin: 0 auto 2rem; font-size: 1.05rem; font-family: var(--font-body); }
+    .brb-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    .brb-section { padding: 3.6rem 1.25rem; max-width: 1040px; margin-inline: auto; }
+    .brb-section-title { text-align: center; font-size: 1.9rem; margin-bottom: 2.4rem; }
+    .brb-section-title em { font-style: normal; color: var(--accent-2); }
+
+    .brb-services { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    .brb-service {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 1.1rem 1.4rem; border: 1px solid rgba(247,247,250,.1); border-radius: 12px; background: var(--bg-2);
+    }
+    .brb-service h3 { font-size: 1.05rem; letter-spacing: .01em; }
+    .brb-service span { font-family: var(--font-mono); font-size: .78rem; color: var(--accent-2); white-space: nowrap; }
+
+    .brb-gallery { display: grid; gap: .8rem; grid-template-columns: repeat(2, 1fr); }
+    .brb-gallery div {
+      aspect-ratio: 1; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(155deg, var(--bg-2), var(--bg));
+      border: 1px solid rgba(247,247,250,.1);
+      color: var(--accent-2);
+    }
+    .brb-gallery svg { width: 34%; height: 34%; opacity: .8; }
+
+    .brb-cta { text-align: center; padding: 4.5rem 1.25rem; background: var(--bg-2); border-top: 1px solid rgba(247,247,250,.08); border-bottom: 1px solid rgba(247,247,250,.08); }
+    .brb-cta h2 { font-size: clamp(1.7rem, 4.5vw, 2.5rem); max-width: 18ch; margin: 0 auto 1rem; }
+    .brb-cta p { color: var(--ink-soft); max-width: 38ch; margin: 0 auto 2rem; font-family: var(--font-body); text-transform: none; letter-spacing: normal; }
+
+    @media (min-width: 720px) {
+      .brb-services { grid-template-columns: repeat(2, 1fr); }
+      .brb-gallery { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="brb-pole" aria-hidden="true"></div>
+  <header class="demo-topbar">
+    <a class="demo-back" href="../index.html#proyectos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a NEXUS COMPANY
+    </a>
+    <span class="demo-topbar-badge">Demo de diseño</span>
+  </header>
+
+  <p class="demo-disclaimer">
+    <strong>Ejemplo ilustrativo</strong> creado por NEXUS COMPANY — no pertenece a ninguna empresa real.
+  </p>
+
+  <main>
+    <section class="brb-hero">
+      <p class="brb-kicker">Barbería de barrio · Desde siempre</p>
+      <h1 class="brb-title">Cortes con <em>oficio</em>, turno con un mensaje.</h1>
+      <p class="brb-sub">Sin vueltas: elegís el día, mandás un WhatsApp y te esperamos con la máquina lista.</p>
+      <div class="brb-actions">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/5492617467701?text=Hola%2C%20necesito%20una%20p%C3%A1gina%20web%20para%20mi%20barber%C3%ADa" target="_blank" rel="noopener">Reservar turno</a>
+        <a class="btn btn-ghost btn-lg" href="#brb-servicios">Ver servicios</a>
+      </div>
+    </section>
+
+    <section class="brb-section" id="brb-servicios">
+      <h2 class="brb-section-title">Nuestros <em>servicios</em></h2>
+      <div class="brb-services">
+        <div class="brb-service"><h3>Corte clásico</h3><span>Consultar</span></div>
+        <div class="brb-service"><h3>Corte + barba</h3><span>Consultar</span></div>
+        <div class="brb-service"><h3>Arreglo de barba</h3><span>Consultar</span></div>
+        <div class="brb-service"><h3>Afeitado a navaja</h3><span>Consultar</span></div>
+      </div>
+    </section>
+
+    <section class="brb-section">
+      <h2 class="brb-section-title">Estilos <em>que hacemos</em></h2>
+      <div class="brb-gallery" aria-hidden="true">
+        <div><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 20c1-2 2.5-3 4-3s3 1 4 3" stroke="currentColor" stroke-width="1.3"/></svg></div>
+        <div><svg viewBox="0 0 24 24" fill="none"><path d="M7 6c0-1.5 2-2 5-2s5 .5 5 2-2 2-2 5v3c0 3-2 6-5 6s-5-3-5-6V9c0-1.5-1-1.5-1-3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+        <div><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="6" r="2.2" stroke="currentColor" stroke-width="1.4"/><circle cx="7" cy="18" r="2.2" stroke="currentColor" stroke-width="1.4"/><path d="m8.7 7.4 11 9.2M19.7 6.6 8.7 15.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      </div>
+    </section>
+
+    <section class="brb-cta">
+      <h2>Elegí tu día y horario</h2>
+      <p>Escribinos por WhatsApp y coordinamos el turno que mejor te quede.</p>
+      <a class="btn btn-primary btn-lg" href="https://wa.me/5492617467701?text=Hola%2C%20necesito%20una%20p%C3%A1gina%20web%20para%20mi%20barber%C3%ADa" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="demo-footer">
+    <p>Esta es una demo de diseño de NEXUS COMPANY — Diseño web para negocios.</p>
+    <a class="demo-back" href="../index.html#proyectos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a NEXUS COMPANY
+    </a>
+  </footer>
+</body>
+</html>

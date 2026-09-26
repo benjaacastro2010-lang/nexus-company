@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo — Concesionaria · NEXUS COMPANY</title>
+  <meta name="description" content="Ejemplo de diseño web para una concesionaria de autos, creado por NEXUS COMPANY. Página demostrativa, no pertenece a una empresa real." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="../styles.css?v=20260926" />
+  <link rel="stylesheet" href="demo.css?v=20260926" />
+  <style>
+    :root {
+      --bg: #0a0f1a;
+      --bg-2: #0d1420;
+      --accent: #4d7cff;
+      --accent-2: #7fe0ff;
+    }
+    body { background: var(--bg); overflow-x: clip; }
+
+    .cnc-hero {
+      position: relative;
+      padding: 4.5rem 1.25rem 5.5rem;
+      text-align: center;
+      overflow: clip;
+      clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+      background: linear-gradient(160deg, var(--bg-2), var(--bg) 60%);
+    }
+    .cnc-hero::before {
+      content: "";
+      position: absolute; inset: -20% -10% auto -10%; height: 70%;
+      background: radial-gradient(45% 60% at 30% 20%, rgba(77,124,255,.35), transparent 70%),
+                  radial-gradient(40% 50% at 80% 10%, rgba(127,224,255,.25), transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .cnc-badge { position: relative; display: inline-block; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-2); background: rgba(127,224,255,.1); border: 1px solid rgba(127,224,255,.3); padding: .4rem .9rem; border-radius: 999px; margin-bottom: 1.4rem; }
+    .cnc-title { position: relative; font-size: clamp(2.1rem, 6vw, 3.6rem); max-width: 18ch; margin: 0 auto 1.1rem; }
+    .cnc-title em { font-style: normal; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .cnc-sub { position: relative; color: var(--ink-soft); max-width: 44ch; margin: 0 auto 2rem; font-size: 1.05rem; }
+    .cnc-actions { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    .cnc-section { padding: 3.5rem 1.25rem; max-width: 1180px; margin-inline: auto; }
+    .cnc-section-head { margin-bottom: 2rem; }
+    .cnc-section-head p { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-2); margin-bottom: .6rem; }
+    .cnc-section-head h2 { font-size: 1.8rem; }
+
+    .cnc-catalog {
+      display: flex;
+      gap: 1.1rem;
+      overflow-x: auto;
+      overflow-y: visible;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+      margin: 0 -1.25rem;
+      padding-inline: 1.25rem;
+    }
+    .cnc-car {
+      scroll-snap-align: start;
+      flex: 0 0 260px;
+      background: var(--bg-2);
+      border: 1px solid rgba(247,247,250,.1);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: border-color .3s ease, transform .3s ease;
+    }
+    .cnc-car:hover { border-color: rgba(127,224,255,.4); transform: translateY(-4px); }
+    .cnc-car svg { width: 100%; height: 90px; color: var(--accent-2); margin-bottom: 1rem; }
+    .cnc-car h3 { font-size: 1.02rem; margin-bottom: .6rem; }
+    .cnc-specs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.1rem; }
+    .cnc-specs span { font-family: var(--font-mono); font-size: .7rem; padding: .25rem .55rem; border-radius: 999px; background: rgba(255,255,255,.06); color: var(--ink-mute); border: 1px solid rgba(255,255,255,.1); }
+
+    .cnc-why { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+    .cnc-why article { background: var(--bg-2); border: 1px solid rgba(247,247,250,.1); border-radius: 14px; padding: 1.6rem; }
+    .cnc-why svg { width: 26px; height: 26px; color: var(--accent-2); margin-bottom: .9rem; }
+    .cnc-why h3 { font-size: 1rem; margin-bottom: .4rem; }
+    .cnc-why p { font-size: .88rem; color: var(--ink-soft); }
+
+    .cnc-cta { text-align: center; padding: 4.5rem 1.25rem; background: var(--bg-2); border-top: 1px solid rgba(247,247,250,.08); }
+    .cnc-cta h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); max-width: 20ch; margin: 0 auto 1rem; }
+    .cnc-cta p { color: var(--ink-soft); max-width: 40ch; margin: 0 auto 2rem; }
+
+    @media (min-width: 720px) { .cnc-why { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+  <header class="demo-topbar">
+    <a class="demo-back" href="../index.html#proyectos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a NEXUS COMPANY
+    </a>
+    <span class="demo-topbar-badge">Demo de diseño</span>
+  </header>
+
+  <p class="demo-disclaimer">
+    <strong>Ejemplo ilustrativo</strong> creado por NEXUS COMPANY — no pertenece a ninguna empresa real.
+  </p>
+
+  <main>
+    <section class="cnc-hero">
+      <span class="cnc-badge">0KM y usados seleccionados</span>
+      <h1 class="cnc-title">Encontrá tu <em>próximo auto</em> sin vueltas.</h1>
+      <p class="cnc-sub">Catálogo actualizado, financiación a medida y respuesta inmediata por WhatsApp.</p>
+      <div class="cnc-actions">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/5492617467701?text=Hola%2C%20necesito%20una%20p%C3%A1gina%20web%20para%20mi%20concesionaria" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <a class="btn btn-ghost btn-lg" href="#cnc-catalogo">Ver catálogo</a>
+      </div>
+    </section>
+
+    <section class="cnc-section" id="cnc-catalogo">
+      <div class="cnc-section-head"><p>Catálogo</p><h2>Modelos destacados</h2></div>
+      <div class="cnc-catalog">
+        <article class="cnc-car">
+          <svg viewBox="0 0 200 100" fill="none"><path d="M15 65h170M30 65v-15l20-20h60l25 20v15" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="55" cy="70" r="12" stroke="currentColor" stroke-width="2"/><circle cx="145" cy="70" r="12" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Modelo ejemplo — Sedán</h3>
+          <div class="cnc-specs"><span>2024</span><span>15.000 km</span><span>Automático</span></div>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5492617467701?text=Hola%2C%20quiero%20consultar%20por%20el%20sed%C3%A1n%20en%20venta" target="_blank" rel="noopener">Consultar</a>
+        </article>
+        <article class="cnc-car">
+          <svg viewBox="0 0 200 100" fill="none"><path d="M10 68h180M25 68V50l15-22h80l30 22v18" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="52" cy="73" r="13" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="73" r="13" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Modelo ejemplo — SUV</h3>
+          <div class="cnc-specs"><span>2023</span><span>28.000 km</span><span>Manual</span></div>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5492617467701?text=Hola%2C%20quiero%20consultar%20por%20la%20SUV%20en%20venta" target="_blank" rel="noopener">Consultar</a>
+        </article>
+        <article class="cnc-car">
+          <svg viewBox="0 0 200 100" fill="none"><path d="M20 62h160M35 62V48l12-18h60l20 18v14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="58" cy="67" r="11" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="67" r="11" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Modelo ejemplo — Hatchback</h3>
+          <div class="cnc-specs"><span>2025</span><span>0 km</span><span>Automático</span></div>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5492617467701?text=Hola%2C%20quiero%20consultar%20por%20el%20hatchback%200km" target="_blank" rel="noopener">Consultar</a>
+        </article>
+        <article class="cnc-car">
+          <svg viewBox="0 0 200 100" fill="none"><path d="M12 66h176M28 66V52l14-20h76l26 20v14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="55" cy="71" r="12" stroke="currentColor" stroke-width="2"/><circle cx="148" cy="71" r="12" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Modelo ejemplo — Pick-up</h3>
+          <div class="cnc-specs"><span>2022</span><span>42.000 km</span><span>4x4</span></div>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5492617467701?text=Hola%2C%20quiero%20consultar%20por%20la%20pick-up" target="_blank" rel="noopener">Consultar</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cnc-section">
+      <div class="cnc-section-head"><p>Por qué elegirnos</p><h2>Comprar acá es más simple</h2></div>
+      <div class="cnc-why">
+        <article>
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h20" stroke="currentColor" stroke-width="1.5"/></svg>
+          <h3>Financiación a medida</h3>
+          <p>Planes de pago adaptados a tu presupuesto.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <h3>Garantía por escrito</h3>
+          <p>Cada vehículo se entrega revisado y con garantía.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <h3>Entrega inmediata</h3>
+          <p>Papeles al día para que salgas manejando el mismo día.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cnc-cta">
+      <h2>¿Buscás un auto puntual?</h2>
+      <p>Contanos qué modelo te interesa y te avisamos apenas entra al catálogo.</p>
+      <a class="btn btn-primary btn-lg" href="https://wa.me/5492617467701?text=Hola%2C%20necesito%20una%20p%C3%A1gina%20web%20para%20mi%20concesionaria" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="demo-footer">
+    <p>Esta es una demo de diseño de NEXUS COMPANY — Diseño web para negocios.</p>
+    <a class="demo-back" href="../index.html#proyectos">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a NEXUS COMPANY
+    </a>
+  </footer>
+</body>
+</html>
