@@ -17,26 +17,13 @@
   }
 
   /* ------------------------------------------------------------------
-     Enriquecer enlaces de contacto (WhatsApp / Instagram / Email) con
-     los datos de lib/manifest.js. El HTML ya trae un href funcional por
-     defecto; esto solo lo mantiene sincronizado si editás manifest.js.
+     Enriquecer enlaces de contacto (Instagram / Email) con los datos de
+     lib/manifest.js. El HTML ya trae un href funcional por defecto;
+     esto solo lo mantiene sincronizado si editás manifest.js.
      ------------------------------------------------------------------ */
   function mountContactLinks() {
     var c = data.contact;
-    if (!c || !c.whatsappNumber) return;
-
-    $$("[data-whatsapp]").forEach(function (el) {
-      // El footer (icono "solo número") no lleva mensaje precargado.
-      if (el.closest(".footer-social")) {
-        el.setAttribute("href", "https://wa.me/" + c.whatsappNumber);
-        return;
-      }
-      // Cada botón puede traer su propio mensaje vía data-wa-text
-      // (ej. las tarjetas de "Proyectos demo"); si no, usa el genérico.
-      var msg = el.getAttribute("data-wa-text") || c.whatsappMessage;
-      el.setAttribute("href", "https://wa.me/" + c.whatsappNumber +
-        (msg ? "?text=" + encodeURIComponent(msg) : ""));
-    });
+    if (!c) return;
 
     var igLink = $('[data-contact-link="instagram"]');
     if (igLink && c.instagramUrl) igLink.setAttribute("href", c.instagramUrl);
