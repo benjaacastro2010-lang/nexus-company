@@ -38,12 +38,6 @@
         (msg ? "?text=" + encodeURIComponent(msg) : ""));
     });
 
-    var waDisplay = $('[data-contact="whatsappDisplay"]');
-    if (waDisplay) {
-      var digits = c.whatsappNumber.replace(/\D/g, "");
-      waDisplay.textContent = "+" + digits;
-    }
-
     var igLink = $('[data-contact-link="instagram"]');
     if (igLink && c.instagramUrl) igLink.setAttribute("href", c.instagramUrl);
     var igText = $('[data-contact="instagram"]');
